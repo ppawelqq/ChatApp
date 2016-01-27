@@ -46,7 +46,7 @@ public class RegisterServlet extends HttpServlet {
         }
 
         Random ran = new Random();
-        int x = ran.nextInt(128) + 5;
+        int x = ran.nextInt(10) + 5;
         
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("PJChatAppPU");
         EntityManager em = emf.createEntityManager();
@@ -54,7 +54,7 @@ public class RegisterServlet extends HttpServlet {
         em.getTransaction().begin();
 
         User user = new User();
-        user.setId(x);
+        user.setOwnColor(Integer.toString(x));
         user.setLogin(n);
         user.setPassword(p);
         user.setFirstName(name);

@@ -26,5 +26,8 @@
         <property name="password" type="string">
             <column name="password" />
         </property>
+        <property name="ownColor" type="string">
+            <column name="own_color" />
+        </property>
     </class>
 </hibernate-mapping>

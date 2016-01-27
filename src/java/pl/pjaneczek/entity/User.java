@@ -20,6 +20,7 @@ public class User  implements java.io.Serializable {
      private Boolean isLogin;
      private String login;
      private String password;
+     private String ownColor;
 
     public User() {
     }
@@ -28,7 +29,7 @@ public class User  implements java.io.Serializable {
     public User(int id) {
         this.id = id;
     }
-    public User(int id, String firstName, String lastName, String mail, Boolean isLogin, String login, String password) {
+    public User(int id, String firstName, String lastName, String mail, Boolean isLogin, String login, String password, String ownColor) {
        this.id = id;
        this.firstName = firstName;
        this.lastName = lastName;
@@ -36,6 +37,7 @@ public class User  implements java.io.Serializable {
        this.isLogin = isLogin;
        this.login = login;
        this.password = password;
+       this.ownColor = ownColor;
     }
    
     public int getId() {
@@ -86,6 +88,14 @@ public class User  implements java.io.Serializable {
     
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getOwnColor() {
+        return ownColor;
+    }
+
+    public void setOwnColor(String ownColor) {
+        this.ownColor = ownColor;
     }
 
 

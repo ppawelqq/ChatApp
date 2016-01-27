@@ -18,10 +18,11 @@ public class Message implements java.io.Serializable {
         this.id = id;
     }
 
-    public Message(int id, String content, String userId) {
+    public Message(int id, String content, String userId, String userName) {
         this.id = id;
         this.content = content;
         this.userId = userId;
+        this.userName = userName;
     }
 
     public int getId() {
