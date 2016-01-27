@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <head>
+        <title>Chat App</title>
+    </head>
+    <body>  
+        <form action="loginServlet" method="post">  
+            <fieldset style="width: 300px">  
+                <legend>Logowanie:  </legend>  
+                <table>  
+                    <tr>  
+                        <td>Login</td>  
+                        <td><input type="text" name="username" required="required" /></td>  
+                    </tr>  
+                    <tr>  
+                        <td>Haslo</td>  
+                        <td><input type="password" name="userpass" required="required" /></td>  
+                    </tr>
+                    <tr>  
+                        <td>PIN</td>  
+                        <td><input type="password" name="pin" required="required" /></td>  
+                    </tr>
+
+                    <tr>  
+                        <td><input type="submit" value="Login" /></td>  
+                    </tr>  
+                </table>  
+            </fieldset>  
+        </form> 
+        <form action="registerServlet" method="post">  
+            <fieldset style="width: 300px">  
+                <legend>Rejestracja  </legend>  
+                <table>  
+                    <tr>  
+                        <td>Login</td>  
+                        <td><input type="text" name="username" required="required" /></td>  
+                    </tr>  
+                    <tr>  
+                        <td>Haslo</td>  
+                        <td><input type="password" name="userpass" required="required" /></td>  
+                    </tr>  
+                    <tr>  
+                        <td>Imie</td>  
+                        <td><input type="text" name="name" required="required" /></td>  
+                    </tr>                
+                    <tr>  
+                        <td>Nazwisko</td>  
+                        <td><input type="text" name="surname" required="required" /></td>  
+                    </tr>  
+                    <tr>  
+                        <td>Mail</td>  
+                        <td><input type="text" name="mail" required="required" /></td>  
+                    </tr> 
+                    <tr>  
+                        <td><input type="submit" value="Rejestruj" /></td>  
+                    </tr>  
+                </table>  
+            </fieldset>  
+        </form>  
+    </body>  
+</html>

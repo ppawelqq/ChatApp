@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-2" />
+        <title>Chat</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript">
+
+            setInterval(function returnJSONData()
+            {
+                var currentLoginUsers = 'JSON';
+                $.ajax({
+                    type: "GET",
+                    url: "./currentLoginUsersServlet",
+                    data: "currentLoginUsers=" + currentLoginUsers,
+                    success: function (result) {
+                        //document.getElementById("currentUserArea").value = JSON.stringify(result);
+                        console.log(result);
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        console.log("error");
+                    }
+                });
+
+            }, 10000);
+        </script>
+        <script type="text/javascript">
+
+            setInterval(function returnJSONData()
+            {
+                var archivesMessages = 'JSON';
+                $.ajax({
+                    type: "GET",
+                    url: "./archivesMessagesServlet",
+                    data: "archivesMessagesServlet=" + archivesMessages,
+                    success: function (result) {
+                        //document.getElementById("messagesArea").value = JSON.stringify(result);
+                        
+                        console.log(result);
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        console.log("error");
+                    }
+                });
+
+            }, 10000);
+        </script>
+    </head>
+    <body>
+
+        <form action="logoutServlet" method="post">  
+            <input type="submit"  value="Wyloguj" />
+        </form> 
+        <form action="currentLoginUsersServlet" method="post">  
+            <input type="submit"  value="Pobierz ludkow" />
+        </form> 
+        <textarea id="messagesArea" style="width:800px; height: 400px" rows="4" cols="50">
+                Tu beda wiadomosci 
+        </textarea>
+        <textarea id="currentUserArea" style="width:800px; height: 400px" rows="4" cols="50">
+                Tu beda zalogowani uzytkownicy
+        </textarea>
+
+        <form action="sendMessageServlet" method="post">  
+            <fieldset style="width: 300px">  
+                <table>  
+                    <tr>  
+                        <td>wiadomosc</td>  
+                        <td><input type="text" name="message" required="required" /></td>  
+                    </tr>
+                    <tr>  
+                        <td><input type="submit" value="Rejestruj" /></td>    
+                    </tr>  
+                </table>  
+            </fieldset>  
+        </form> 
+    </body>
+</html>

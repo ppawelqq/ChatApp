@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/applicationContext.xml</param-value>
+    </context-param>
+    <servlet>  
+        <servlet-name>login</servlet-name>  
+        <servlet-class>pl.pjaneczek.controller.LoginServlet</servlet-class>  
+    </servlet>  
+    <servlet>  
+        <servlet-name>logout</servlet-name>  
+        <servlet-class>pl.pjaneczek.controller.LogoutServlet</servlet-class>  
+    </servlet>  
+    <servlet>  
+        <servlet-name>register</servlet-name>  
+        <servlet-class>pl.pjaneczek.controller.RegisterServlet</servlet-class>  
+    </servlet>  
+    <servlet>  
+        <servlet-name>sendMessage</servlet-name>  
+        <servlet-class>pl.pjaneczek.controller.SendMessageServlet</servlet-class>  
+    </servlet>
+    <servlet>  
+        <servlet-name>currentLoginUsers</servlet-name>  
+        <servlet-class>pl.pjaneczek.controller.CurrentLoginUsersServlet</servlet-class>  
+    </servlet>  
+    <servlet>  
+        <servlet-name>archivesMessages</servlet-name>  
+        <servlet-class>pl.pjaneczek.controller.ArchivesMessagesServlet</servlet-class>  
+    </servlet>  
+  
+    <servlet-mapping>  
+        <servlet-name>login</servlet-name>  
+        <url-pattern>/loginServlet</url-pattern>  
+    </servlet-mapping>  
+    <servlet-mapping>  
+        <servlet-name>logout</servlet-name>  
+        <url-pattern>/logoutServlet</url-pattern>  
+    </servlet-mapping>  
+    <servlet-mapping>  
+        <servlet-name>register</servlet-name>  
+        <url-pattern>/registerServlet</url-pattern>  
+    </servlet-mapping>
+    <servlet-mapping>  
+        <servlet-name>sendMessage</servlet-name>  
+        <url-pattern>/sendMessageServlet</url-pattern>  
+    </servlet-mapping>  
+    <servlet-mapping>  
+        <servlet-name>currentLoginUsers</servlet-name>  
+        <url-pattern>/currentLoginUsersServlet</url-pattern>  
+    </servlet-mapping>  
+    <servlet-mapping>  
+        <servlet-name>archivesMessages</servlet-name>  
+        <url-pattern>/archivesMessagesServlet</url-pattern>  
+    </servlet-mapping>   
+  
+    <welcome-file-list>  
+        <welcome-file>index.xhtml</welcome-file>  
+    </welcome-file-list>  
+</web-app>
